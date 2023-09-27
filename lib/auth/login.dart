@@ -32,10 +32,6 @@ class _LoginScreenState extends State<LoginScreen> {
     // final _authData = Provider.of<AuthProvider>(context);
     Services _services = Services();
 
-    scaffoldMessage(message) {
-      return Scaffold.of(context)
-          .showSnackBar(SnackBar(content: Text(message)));
-    }
 
     return SafeArea(
       child: Scaffold(
@@ -217,7 +213,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          FlatButton(
+                          TextButton(
                             child: RichText(
                               text: const TextSpan(text: '', children: [
                                 TextSpan(

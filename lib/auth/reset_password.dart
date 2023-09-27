@@ -100,13 +100,13 @@ class _ResetPasswordState extends State<ResetPassword> {
                     label: "Reset Password",
                     labelStyle: TextStyle(fontSize: 20),
                     onPressed: () {
+                      var snackBar = SnackBar(content: Text('Please check your phone number ${_phoneTextController.text} for password reset instructions'));
                       if (_formKey.currentState!.validate()) {
                         setState(() {
                           _loading = true;
                         });
-                        Scaffold.of(context).showSnackBar(SnackBar(
-                            content: Text(
-                                'Please check your phone number ${_phoneTextController.text} for password reset instructions')));
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
                       }
                       Navigator.pushReplacementNamed(context, LoginScreen.id);
                     },

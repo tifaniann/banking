@@ -31,7 +31,7 @@ class _SignupState extends State<Signup> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    FlatButton(
+                    TextButton(
                       child: RichText(
                         text: const TextSpan(text: '', children: [
                           TextSpan(
